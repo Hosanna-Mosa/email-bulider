@@ -19,5 +19,9 @@ app.use(cookieParser());
 // Routes
 app.use('/', emailRoutes);
 
+app.get("/" , (req,res) => {
+  res.redirect("/getEmailLayout");
+});
+
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
