@@ -9,7 +9,7 @@ const router = express.Router();
 
 
 // Routes
-router.get('/', emailController.getEmailLayout);
+router.get('/getEmailLayout', emailController.getEmailLayout);
 router.get('/uploadImage', emailController.image);
 router.post('/uploadImage', upload.single('image'), emailController.uploadImage);
 router.post('/uploadEmailConfig', emailController.saveEmailConfig);
