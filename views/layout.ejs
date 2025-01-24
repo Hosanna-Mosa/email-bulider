@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Builder</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <form class="email-builder" action="/uploadEmailConfig" method="post">
+    <!-- Sidebar -->
+    <aside class="settings-panel">
+      
+      <h2 style="text-align: center;">Settings</h2>
+      <div class="setting-group">
+        <label for="titleText">Title:</label>
+        <textarea rows="5" cols="35" id="titleText" name="title" placeholder="Enter title"></textarea>
+        <!-- <input type="text" id="titleText" placeholder="Enter title"> -->
+      </div>
+      <div class="setting-group">
+        <label for="textColor">Title Color:</label>
+        <input type="color" name="titleColor" id="titleTextColor">
+      </div>
+
+      <div class="setting-group">
+        <label for="titleFontSize" >Title Size:</label>
+        <select  id="titleFontSize" name="titleSize">
+          <option value="35px">Small </option>
+          <option value="45px">Medium</option>
+          <option value="55px">Large</option>
+        </select>
+      </div>
+
+      <div class="setting-group">
+        <label for="contentText">Content:</label>
+        <textarea rows="5" cols="35" id="contentText" placeholder="Enter content" name="content"></textarea>
+      </div>
+      <div class="setting-group">
+        <label for="textColor">Content Color:</label>
+        <input type="color" name="contentColor" id="contentTextColor">
+      </div>
+      
+      <div class="setting-group">
+        <label for="contentFontSize">Content Size:</label>
+        <select id="contentFontSize" name="contentSize">
+          <option value="30px">Small</option>
+          <option value="37px">Medium</option>
+          <option value="44px">Large</option>
+        </select>
+      </div>
+      <button class="cta-btn setting-btn "  id="down-btn" type="submit">Download</button>
+      
+    </aside>
+
+    <!-- Main Editor -->
+    <main class="editor">
+      
+        
+          <div class="top">
+            <p id="fontImg">Frist Upload logo</p>
+            <img id="top-img"
+            <% if(imageUrl) {%>
+            src=<%= imageUrl %>
+            <% } %>
+             alt="">
+            
+              <a href="/uploadImage"><button class="cta-btn " id="photo-btn" type="button">Upload logo</button></a>
+            
+          </div>
+          <div class="middle">
+            <h2 contenteditable="True" id="myTitle">Enter the title</h2>
+          </div>
+          <div class="footer">
+            <p id="myParagraph" contenteditable="">Enter the content here !!</p>
+          </div>
+
+
+          <!-- <button class="cta-btn">Get Started</button>
+          <button class="cta-btn">Learn More</button> -->
+       
+        <!-- <section class="email-section">
+          <img src="https://via.placeholder.com/600x200" alt="Email Image">
+        </section> -->
+    
+    </main>
+  </form>
+  <!-- <script>
+    const textColorInput = document.getElementById("titleTextColor");
+    const titleText = document.getElementById("myTitle");
+    const titleInput = document.getElementById("titleText");
+    
+    textColorInput.addEventListener("chnage", () => {
+      titleText.style.color = textColorInput.value;
+    });
+
+    titleText.addEventListener("click" , () =>{
+        console.log(titleText);
+        
+        titleInput.value = titleText.textContent;
+        
+    });
+    
+    
+  </script> -->
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,207 @@
+/* General Body Styling */
+body {
+    font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    display: flex;
+}
+
+/* Email Builder Layout */
+.email-builder {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: row-reverse; /* This moves the settings panel to the right */
+}
+
+/* Sidebar/Settings Panel */
+.settings-panel {
+    height: 90%;
+    width: 25%;
+    background: linear-gradient(135deg, #ffffff, #e9ecef); /* Subtle gradient */
+   
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+    overflow-y: auto; /* Scrollable if content overflows */
+    padding: 20px;
+    margin-right: 13px;
+    margin-top: 15px;
+}
+
+.settings-panel h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase; /* Makes it stand out */
+    border-bottom: 2px solid #007bff; /* Add a bottom border */
+    padding-bottom: 10px;
+}
+
+#myTitle{
+    text-align: center;
+}
+
+.setting-group {
+    margin-bottom: 20px;
+}
+
+.setting-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 10px;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+.setting-group input[type="text"],
+.setting-group input[type="color"],
+.setting-group select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #495057;
+    background: #fff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* Adds depth to inputs */
+    outline: none;
+    transition: all 0.2s;
+}
+
+.setting-group input:focus,
+.setting-group select:focus {
+    border-color: #007bff; /* Blue focus border */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.setting-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 0;
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.setting-btn:hover {
+    background: #0056b3;
+    transform: translateY(-2px); /* Adds a hover lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.setting-btn:active {
+    transform: translateY(0); /* No lift effect when clicked */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Editor Panel */
+.editor {
+    width: 75%;
+    padding: 0 20px 0 20px;
+    overflow-y: auto;
+    background: #ffffff;
+}
+
+#emailLayout {
+    max-width: 800px;
+    margin: auto;
+    background: #fdfdfd;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+/* Email Section Styling */
+.email-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px dashed #ccc;
+}
+
+.email-section h1, 
+.email-section p {
+    margin: 10px 0;
+}
+
+/* Call-to-Action Buttons */
+.cta-btn {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.cta-btn:hover {
+    background: #0056b3;
+}
+
+#myTitle{
+    font-size: 35px;
+    visibility:visible;
+    
+}
+
+.top{
+    height: 28%;
+    border: solid gray 2px;
+    border-radius: 25px;
+    margin-bottom: 5px;
+}
+
+.top img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-left:45%;
+    margin-top: 11px;
+    /* display: none; */
+    /* display: none; */
+}
+
+.top p{
+    margin: 0;
+    text-align: center;
+    font-size: large;
+}
+
+#photo-btn{
+    
+    /* border-rad/ius: 50%; */
+    margin-left:45%;
+    margin-top: 10px;
+    
+}
+.middle{
+    height: 20%;
+    border: solid gray 2px;
+    border-radius: 25px;
+    margin-bottom: 5px;
+    
+}
+
+.footer{
+    height: 47%;
+    border: solid gray 2px;
+    border-radius: 25px;
+}
+
+.footer p {
+    margin: 25px;
+    font-size: 30px;
+    
+}

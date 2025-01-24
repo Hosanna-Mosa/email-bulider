@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Builder</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+.editor{
+  margin-right: 150px;
+}
+  </style>
+  
+</head>
+<body>
+  <form class="email-builder" action="/uploadEmailConfig" method="post">
+    
+
+    <!-- Main Editor -->
+    <main class="editor">
+      
+        
+          <div class="top">
+            
+            <img id="top-img"
+            <% if (data.imageUrl) { %>
+             src=<%= data.imageUrl %> 
+            <% } %>
+             alt="">
+            
+
+            
+          </div>
+          <div class="middle">
+            <h2  id="myTitle"><%= data.title %></h2>
+            <p id="titleSizeid" style="display: none;"><%= data.settings.titleSize %></p>
+            <p id="titleColorid" style="display: none;"><%= data.settings.titleColor %></p>
+          </div>
+          <div class="footer">
+            <p id="myParagraph" ><%= data.content %></p>
+            <p id="contentSizeid" style="display: none;"><%= data.settings.contentSize %></p>
+            <p id="contentColorid" style="display: none;"><%= data.settings.contentColor %></p>
+  
+          </div>
+
+
+          <!-- <button class="cta-btn">Get Started</button>
+          <button class="cta-btn">Learn More</button> -->
+       
+        <!-- <section class="email-section">
+          <img src="https://via.placeholder.com/600x200" alt="Email Image">
+        </section> -->
+    
+    </main>
+  </form>
+  <script>
+    document.getElementById("myTitle").style.fontSize = document.getElementById("titleSizeid").innerText;
+    document.getElementById("myTitle").style.color = document.getElementById("titleColorid").innerText;
+
+    document.getElementById("myParagraph").style.fontSize = document.getElementById("contentSizeid").innerText;
+    document.getElementById("myParagraph").style.color = document.getElementById("contentColorid").innerText;
+    
+    
+  </script>
+</body>
+</html>
+

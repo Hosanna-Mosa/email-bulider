@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="email-builder">
+    <!-- Sidebar -->
+    <aside class="settings-panel">
+      <h2 style="text-align: center;">Settings</h2>
+      <div class="setting-group">
+        <label for="titleText">Title:</label>
+        <textarea id="titleText" placeholder="Enter title"></textarea>
+        <!-- <input type="text" id="titleText" placeholder="Enter title"> -->
+      </div>
+      <div class="setting-group">
+        <label for="textColor">Title Color:</label>
+        <input type="color" id="titleTextColor">
+      </div>
+
+      <div class="setting-group">
+        <label for="titleFontSize">Title Size:</label>
+        <select id="titleFontSize">
+          <option value="18px">Small</option>
+          <option value="30px">Medium</option>
+          <option value="36px">Large</option>
+        </select>
+      </div>
+
+      <div class="setting-group">
+        <label for="contentText">Content:</label>
+        <textarea id="contentText" placeholder="Enter content"></textarea>
+      </div>
+      <div class="setting-group">
+        <label for="textColor">Content Color:</label>
+        <input type="color" id="contentTextColor">
+      </div>
+      
+      <div class="setting-group">
+        <label for="contentFontSize">Content Size:</label>
+        <select id="contentFontSize">
+          <option value="12px">Small</option>
+          <option value="18px">Medium</option>
+          <option value="26px">Large</option>
+        </select>
+      </div>
+      <button class="cta-btn setting-btn">Get Started</button>
+    </aside>
+
+    <!-- Main Editor -->
+    <main class="editor">
+      
+        
+          <div class="top">
+            <img id="top-img" src="NaPhoto.jpg" alt="">
+            <form action="/upload">
+              <button class="cta-btn " id="photo-btn" type="submit">Add logo</button>
+            </form>
+          </div>
+          <div class="middle">
+            <h2 contenteditable="True" id="myTitle">Enter the title</h2>
+          </div>
+          <div class="footer">
+            <p id="myParagraph" contenteditable="">Enter the content here !!</p>
+          </div>
+
+
+          <!-- <button class="cta-btn">Get Started</button>
+          <button class="cta-btn">Learn More</button> -->
+       
+        <!-- <section class="email-section">
+          <img src="https://via.placeholder.com/600x200" alt="Email Image">
+        </section> -->
+    
+    </main>
+  </div>
+  <!-- <script>
+    const textColorInput = document.getElementById("titleTextColor");
+    const titleText = document.getElementById("myTitle");
+
+    textColorInput.addEventListener("chnage", () => {
+      titleText.style.color = textColorInput.value;
+    });
+  </script> -->
+  <script src="script.js"></script>
+</body>
+</html>
